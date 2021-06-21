@@ -32,8 +32,8 @@ shinyUI(
                     #title = "Select Date",
                     sliderInput("minimum_date",
                                 "",
-                                min = as.Date(cv_min_date,"%Y-%m-%d"),
-                                max = as.Date(current_date,"%Y-%m-%d"),
+                                min = as.Date(min(corona$date),"%Y-%m-%d"),
+                                max = as.Date(max(corona$date),"%Y-%m-%d"),
                                 value=as.Date("2020-04-21"),
                                 timeFormat="%d %b"),
                   )
